@@ -1,9 +1,18 @@
 *{
     margin: 0;
     padding: 0;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:Azonix;
 }
 
+@font-face {
+    font-family: DepartureMono;
+    src: url(./static/fonts/DepartureMono-Regular.woff);
+}
+
+@font-face {
+    font-family: Azonix;
+    src: url(./static/fonts/azonix.otf);
+}
 body{
     background-image: linear-gradient(to bottom, #020F26 0%, black 100%);
     display: flex;
@@ -34,7 +43,7 @@ body{
     height: 5%;
     /* padding: 1vw; */
     /* margin: 1vw; */
-    border-radius: 2vw;
+    border-radius: 1vw 1vw 0 0;
     font-size: large;
     align-items: center;
     justify-content: space-between;
@@ -48,6 +57,7 @@ body{
     width: calc(0.1*var(--width));
     font-size: calc(0.02*var(--width));
     display: flex;
+    color: rgb(255, 255, 255);
     margin-left: 1vw;
     flex-direction: row;
     align-items: center;
@@ -79,11 +89,13 @@ i{
 }
 
 a{
+    height: 100%;
     text-decoration: none;
     color: white;
     font-size: 24px;
     display: flex;
     align-items: center;
+    transition:linear 0.2s;
 }
 a>p{
     margin-left: 2%;
@@ -91,16 +103,81 @@ a>p{
 }
 
 #demo{
+    cursor: pointer;
     width: calc(0.2 * var(--width));
     height: calc(0.1 * var(--height));
     border-radius: .5vw;
-    border: #fff 1px solid;
-    color: aliceblue;
+    background-color: #222;
+    color: #fff;
     position: absolute;
     left: 35%;
     top: 30%;
     display: flex;
-    font-size: calc(min((0.02*var(--width)),(0.02*var(--height))));
+    font-size: calc(min(calc(0.02*var(--width)),calc(0.02*var(--height))));
     align-items: center;
     justify-content: center;
+    
+}
+
+a:hover{
+    transition: all linear 0.5s;
+    color: aquamarine;
+}
+
+.button {
+    cursor: pointer;
+    position: relative;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: rgba(255, 255, 255, .1);
+    border: 3px solid rgba(255, 255, 255, .2);
+    border-radius: 18px;
+    transition: .4s;
+}
+
+.button:hover {
+    z-index: 1;
+    border-color: transparent;
+    background: linear-gradient(
+        90deg,
+        #f9d923,
+        #00a19d,
+        #0c87b7,
+        #cb49ff,
+        #ff6666,
+        #f9d923
+    );
+    background-size: 400%;
+    box-shadow: 0 0 15px rgb(2, 4, 24);
+    animation: glow 12s linear forwards;
+}
+
+@keyframes glow {
+
+    from {
+        background-position: 0%;
+    }
+
+    to {
+        background-position: 400%;
+    }
+
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    left: -1px;
+    background: inherit;
+    filter: blur(80px);
+    opacity: 0;
+    transition: .4s ease-out;
+}
+
+.button:hover::before {
+    opacity: 1; 
+    z-index: -1;
 }
