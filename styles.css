@@ -32,7 +32,7 @@ body{
     display: flex;
     background-image: url("./static/imgs/bg.png");
     background-size:cover;
-    border-radius: 1vw;
+    /* border-radius: 1vw; */
     flex-direction: column;
 }
 
@@ -41,9 +41,6 @@ body{
     display: flex;
     width: var(--width);
     height: 5%;
-    /* padding: 1vw; */
-    /* margin: 1vw; */
-    border-radius: 1vw 1vw 0 0;
     font-size: large;
     align-items: center;
     justify-content: space-between;
@@ -98,7 +95,7 @@ a{
     transition:linear 0.2s;
 }
 a>p{
-    margin-left: 2%;
+    /* margin-left: 1%; */
     font-size: calc(0.015*var(--width));
 }
 
