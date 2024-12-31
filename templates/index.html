@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{{url_for('static',filename="css/normalize.css")}}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+	<link rel="stylesheet" href={{url_for('static',filename="css/featherlight.min.css")}}>
+	<link href='https://fonts.googleapis.com/css?family=Arimo:400,700' rel='stylesheet' type='text/css'>
+	
+	<script src={{url_for('static',filename="js/jquery-latest.min.js")}}></script>
+	<script type="text/javascript" src={{url_for('static',filename='js/featherlight.min.js')}}></script> 
+
+</head>
+<body>
+	<header id="top">
+		<div class="wrapper">
+			<h1 class="logo"><a href="#">Pr!sm</a></h1>
+			<nav>
+				<ul id="navigation">
+					<li><a href="#home">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#services">API</a></li>
+					<!-- <li><a href="#portfolio">Portfolio</a></li> -->
+					<li><a class="nav-cta" href="#">Try Now</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<section id="banner"><a name="home"></a>
+		<div class="wrapper">
+			<h2>Pr!sm</h2>
+			<p class="subtitle">Clean, Minimal Prism Plugins</p>
+			<div class="buttons">
+				<a href="#" class="button-1">Try Now</a>
+				<a href="#" class="button-2">Learn More</a>
+			</div>
+		</div>
+	</section>
+	
+	<!-- <section class="video-section">	
+		<div class="wrapper">
+			<h3>What is Chase?</h3>
+			<p class="subtitle">Watch our promotional video</p>
+			<video width="790" src="video.mp4" poster="images/video-poster.jpg" onclick="this.play();" controls preload>
+				<p>Video playback unsupported</p>
+			</video>
+			<a href="#" class="button-1">Begin</a>
+		</div>
+	</section>
+	
+	<section class="services-section"><a name="services"></a>
+		<div class="wrapper">
+			<h3>Services</h3>
+			<p class="subtitle">We do lots of cool things</p>
+			<ul class="services-list">
+				<li>
+					<div class="image-container">
+						<img src="images/icon-pencil.png" alt="services icon" >
+					</div>
+					<h5>Graphic Design</h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis gravida blandit lacus a laoreet. </p>
+					<a href="#">Learn More</a>
+				</li>
+				<li>
+					<div class="image-container">
+						<img src="images/icon-camera.png" alt="services icon" >
+					</div>
+					<h5>Photography</h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis gravida blandit lacus a laoreet. </p>
+					<a href="#">Learn More</a>
+				</li>
+				<li>
+					<div class="image-container">
+						<img src="images/icon-film.png" alt="services icon" >
+					</div>
+					<h5>Animation</h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis gravida blandit lacus a laoreet. </p>
+					<a href="#">Learn More</a>
+				</li>
+				<div class="clear"></div>	
+			</ul>
+		</div>
+	</section> -->
+
+	<section class="text-section">	
+		<div class="wrapper">
+			<div class="image align-left">
+				<img src="{{url_for("static",filename="imgs/light-bulb.png")}}" alt="light bulb" class="align-left">
+			</div>
+			<div class="text align-left">
+				<h3>We Love Bright Ideas</h3>
+				<p class="subtitle">See Your Ideas Brought to Life</p>
+				<p>Prism is created as an elegent and user-friendly LLM model client interface. With use of function calling can enhance their capabilities and bring more convenience to your requests.</p>
+				<p>Interesting ideas and suggestions are welcome. Your ideas will be replied soon after you submit an issue in this repo.</p>
+			</div>
+			<div class="clear"></div>	
+		</div>
+	</section>
+
+	<section class="features-section">	
+		<div class="wrapper">
+			<ul class="feature-squares">
+				<li>
+					<div class="image">
+						<img src="{{url_for("static",filename="imgs/icon-eye.png")}}" alt="feature icon">
+					</div>
+					<div class="text">
+						<h5>Realtime Weather</h5>
+						<p>Using Qweather to get realtime weather with given location name. Help you manage your trip.</p>
+					</div>
+				</li>
+				<li>
+					<div class="image">
+						<img src="{{url_for("static",filename="imgs/icon-clock.png")}}" alt="feature icon">
+					</div>
+					<div class="text">
+						<h5>Bing Search</h5>
+						<p>Availiable using BING search to get more useful information now! Get news, information and other things you interested in with Bing!</p>
+					</div>
+				</li>
+				<li>
+					<div class="image">
+						<img src="{{url_for("static",filename="imgs/icon-dashboard.png")}}" alt="feature icon">
+					</div>
+					<div class="text">
+						<h5>Arxiv Search</h5>
+						<p>Help you search the file!</p>
+					</div>
+				</li>
+				<li>
+					<div class="image">
+						<img src="{{url_for("static",filename="imgs/icon-headset.png")}}" alt="feature icon">
+					</div>
+					<div class="text">
+						<h5>Your idea</h5>
+						<p>More functions will coming soon...</p>
+					</div>
+				</li>
+				<div class="clear"></div>	
+			</ul>
+		</div>
+	</section>
+	
+	<section class="text-section">	
+		<div class="wrapper">
+			<div class="image align-right">
+				<img src="{{url_for("static",filename="imgs/chat-bubbles.png")}}" alt="light bulb" class="align-left" style="margin-top: 60px;">
+			</div>
+			<div class="text align-right">
+				<h3>Let’s Talk</h3>
+				<p class="subtitle">We’re here to listen to your needs</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis gravida blandit lacus a laoreet. Nullam sollicitudin urna metus, at malesuada orci fringilla in. </p>
+				<ul class="list-checkmarks">
+					<li>Curabitur eleifend risus vitae ligula semper scelerisque.</li>
+					<li>Fusce interdum suscipit ipsum.</li>
+					<li>Quis mattis metus posuere sit amet.</li>
+					<li>Mauris rutrum imperdiet tortor.</li>
+				</ul>
+			</div>
+			<div class="clear"></div>	
+		</div>
+	</section>
+	
+	
+
+	<footer>
+		<div class="wrapper">
+			<a class="logo" href="#">Chase</a>
+			<div class="footer-left">
+				<p class="copyright">Copyright &copy; 2024. Laked22 All rights reserved.</p>
+				<p class="footer-links"><a href="#">Issue Report</a> I <a href="#">Terms &amp; Conditions</a> I<a href="#">Features Requests</a></p>
+			</div>
+			<!-- <div class="footer-right">
+				<a href="#" class="social facebook">Facebook</a>
+				<a href="#" class="social twitter">Facebook</a>
+				<a href="#" class="social google">Facebook</a>
+			</div> -->
+			<div class="clear"></div>
+		</div>
+	</footer>
+</body>
+</html>
