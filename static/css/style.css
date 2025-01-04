@@ -131,9 +131,10 @@ a.button-1:hover {
 }
 
 a.button-2 {
+	color: #e4e4e4;
 	border-color: #444;
-	background: none;
-	color: #444;
+	background: #777;
+	/* color: #444; */
 }
 
 a.button-2:hover {
@@ -233,7 +234,7 @@ header#top nav ul li a.nav-cta {
 
 #banner {
 	height: 840px;
-	background: #f1f6f4 url("/static/imgs/header-image.jpg") no-repeat center;
+	background: #ffffff url("/static/imgs/banner.jpg") center;
 	position: relative;
 	padding: 1px 0 0 0;
 }
@@ -242,7 +243,7 @@ header#top nav ul li a.nav-cta {
 	margin: 220px auto 0;
 	padding: 0 5%;
 	opacity: 0.9;
-	color: #333;
+	color: #ffffff;
 	font-size: 108px;
 	text-align: center;
 	text-transform: uppercase;
@@ -252,6 +253,7 @@ header#top nav ul li a.nav-cta {
 
 #banner p.subtitle {
 	font-size: 20px;
+	color: #a7a7a7;
 	margin: 10px 0 50px 0;
 }
 
@@ -827,6 +829,7 @@ ul.pricing-table .button-1 {
 
 ul.pricing-table .button-2 {
 	color: #777;
+	background-color: #777;
 	border-color: #777;
 }
 
@@ -837,7 +840,7 @@ ul.pricing-table .button-1:hover {
 }
 
 ul.pricing-table .button-2:hover {
-	background-color: #777;
+	background-color: #bdbdbd;
 	color: #fff;
 }
 

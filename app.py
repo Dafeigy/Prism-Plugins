@@ -6,17 +6,18 @@ app = Flask(__name__)
 app.config['JSON_AS_ASCII'] = False
 
 
-# QWeather KEY
-KEY = os.environ['KEY']
+
 
 @app.route('/')
 def home():
     return render_template('index.html')
 
+# QWeather KEY
+QWeather_KEY = os.environ['QWeather_KEY']
 @app.route("/qweather", methods = ['GET'])
 def get_weather_data():
     city_name = request.args.get("city_name")
-    geo_url = f"https://geoapi.qweather.com/v2/city/lookup?location={city_name}&key={KEY}"
+    geo_url = f"https://geoapi.qweather.com/v2/city/lookup?location={city_name}&key={QWeather_KEY}"
     req = requests.get(geo_url)
     # print(req.json())
     res = req.json()
@@ -24,7 +25,7 @@ def get_weather_data():
         city_id = res['location'][0]['id']
     else:
         return jsonify({"error": "Not found"}),404
-    weather_url = f"https://devapi.qweather.com/v7/weather/now?location={city_id}&key={KEY}"
+    weather_url = f"https://devapi.qweather.com/v7/weather/now?location={city_id}&key={QWeather_KEY}"
     req = requests.get(weather_url)
     # print(req.json())
     res = req.json()
