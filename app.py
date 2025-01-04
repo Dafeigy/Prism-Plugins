@@ -16,6 +16,7 @@ def home():
 QWeather_KEY = os.environ['QWeather_KEY']
 @app.route("/qweather", methods = ['GET'])
 def get_weather_data():
+    """Test"""
     city_name = request.args.get("city_name")
     geo_url = f"https://geoapi.qweather.com/v2/city/lookup?location={city_name}&key={QWeather_KEY}"
     req = requests.get(geo_url)
