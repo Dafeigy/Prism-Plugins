@@ -1,0 +1,36 @@
+{
+    "openapi": "3.1.0",
+    "info": {
+      "title": "和风天气",
+      "description": "一个实时天气获取工具，可以获得某地的最新天气情况的数据.",
+      "version": "v1.0.0"
+    },
+    "servers": [
+      {
+        "url": "https://prism-plugins.vercel.app"
+      }
+    ],
+    "paths": {
+      "/qweather": {
+        "get": {
+          "operationId": "使用@和风天气查询",
+          "description": "请求和风天气API并获得{{city_name}}的实时天气数据",
+          "deprecated": false,
+          "parameters": [
+            {
+              "name": "city_name",
+              "in": "query",
+              "required": true,
+              "description": "需要查询的城市名称",
+              "schema": {
+                "type": "string"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "components": {
+      "schemas": {}
+    }
+  }
