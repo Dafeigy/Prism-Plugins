@@ -12,15 +12,9 @@
         "dest": "app.py"
       }
     ],
-    "rewrites": [
-      {
-          "source": "/api/(.*)",
-          "destination": "/api/app"
-      }
-    ],
       "functions": {
-        "api/*.py": {
-          "maxDuration": 30
+        "*.py": {
+          "maxDuration": 10
         }
       }
   }
