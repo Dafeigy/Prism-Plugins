@@ -1,0 +1,36 @@
+{
+    "openapi": "3.1.0",
+    "info": {
+      "title": "Flux.1-dev",
+      "description": "一个根据用户输入生成图片的工具",
+      "version": "v1.0.0"
+    },
+    "servers": [
+      {
+        "url": "https://prism-plugins.vercel.app"
+      }
+    ],
+    "paths": {
+      "/flux-gen": {
+        "get": {
+          "operationId": "使用@Flux.1-dev生成",
+          "description": "请求图片生成工具Flux.1-dev生成用户希望生成的{user_input}图片",
+          "deprecated": false,
+          "parameters": [
+            {
+              "name": "user_input",
+              "in": "query",
+              "required": true,
+              "description": "用户希望生成的图片描述",
+              "schema": {
+                "type": "string"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "components": {
+      "schemas": {}
+    }
+  }
