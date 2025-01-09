@@ -14,6 +14,7 @@ def home():
 
 # QWeather KEY
 QWeather_KEY = os.environ['QWeather_KEY']
+Siliconflow_KEY = os.environ['Siliconflow_KEY']
 @app.route("/qweather", methods = ['GET'])
 def get_weather_data():
     """Test"""
@@ -41,7 +42,7 @@ def get_weather_data():
     else:
         return jsonify({"error": "Internal server error"}), 500
 
-Siliconflow_KEY = os.environ['Siliconflow_KEY']
+
 @app.route("/flux-gen", methods = ['GET'])
 def flux_gen():
     user_prompt = request.args.get("user_input")
@@ -165,6 +166,7 @@ def flux_gen():
         "n": 1,
         "response_format": {"type": "json_object"}
     }
+    
     headers = {
         "Authorization": f"Bearer {Siliconflow_KEY}",
         "Content-Type": "application/json"
@@ -175,6 +177,7 @@ def flux_gen():
         return jsonify({"error": "Can not connect to Siliconflow"}),400
     else:
         image_prompt = eval(response.json()['choices'][0]['message']['content'])['results']
+    print(image_prompt)
     url = "https://api.siliconflow.cn/v1/images/generations"
 
     payload = {
