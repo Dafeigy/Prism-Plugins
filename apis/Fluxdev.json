@@ -13,7 +13,7 @@
     "paths": {
       "/flux-gen": {
         "get": {
-          "operationId": "使用@Flux.1-dev生成",
+          "operationId": "使用@QWeb2.5-7b+@Flux.1-dev生成",
           "description": "请求图片生成工具Flux.1-dev生成用户希望生成的{user_input}图片",
           "deprecated": false,
           "parameters": [
